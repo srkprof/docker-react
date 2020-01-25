@@ -6,4 +6,4 @@ before-install:
   - docker build -t srk/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run srk/docker-react npm run test -- --coverage
+  - docker run -e CI=true srk/docker-react npm run test -- --coverage
